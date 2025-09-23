@@ -1,0 +1,21 @@
+spring:
+  application:
+    name: CookBookApp
+
+
+  datasource:
+    url: jdbc:postgresql://localhost:5438/cookbook
+    driver-class-name: org.postgresql.Driver
+    username: cookbook_dev
+    password: cookbook_dev12
+  jpa:
+    generate-ddl: false
+    hibernate:
+      ddl-auto: none
+
+  flyway:
+    enabled: true
+    locations: classpath:db/migration
+
+server:
+  port: 8080
