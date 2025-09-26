@@ -1,6 +1,7 @@
 package swf.army.mil.cookbookapp.recipe;
 
 import org.springframework.stereotype.Service;
+import org.springframework.web.bind.annotation.GetMapping;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -34,5 +35,9 @@ public class RecipeService {
 //            }
 //        return null;
         return recipeRepository.findById(id).orElse(null);
+    }
+
+    public List<Recipe> searchRecipeByKeyword(String keyword){
+        return recipeRepository.findByTitleContainingIgnoreCase(keyword);
     }
 }

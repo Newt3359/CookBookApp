@@ -39,4 +39,13 @@ public class RecipeController {
 //        return recipe1;
         return recipeService.getRecipeById(id);
     }
+
+    @GetMapping("/search")
+    public List<Recipe> searchByRecipe(@RequestParam(required = false) String keyword){
+        if (keyword !=null && !keyword.isEmpty()){
+            return recipeService.searchRecipeByKeyword(keyword);
+        }else{
+            return recipeService.getAllRecipes();
+        }
+    }
 }
