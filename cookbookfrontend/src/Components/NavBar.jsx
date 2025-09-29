@@ -31,7 +31,7 @@ function Example(args) {
                             <Link className="nav-link" to="/addRecipe">Add Recipe</Link>
                         </NavItem>
                         <NavItem>
-                            <NavLink className="NavText">Read Recipe</NavLink>
+                            <Link className="nav-link" to="/searchRecipe">Read Recipe</Link>
                         </NavItem>
                         <NavItem>
                             <NavLink className="NavText">Create Shopping List</NavLink>
